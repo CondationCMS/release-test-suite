@@ -37,4 +37,17 @@ export default function () {
         }
     });
 
+    res = http.get("http://localhost:1010/api/template");
+    check(res, {
+        'is status 200': (r) => r.status === 200,
+        'contains expected response': (r) => {
+            try {
+                let json = JSON.parse(r.body);
+                return json.name === 'CondationCMS';
+            } catch (e) {
+                return false;
+            }
+        }
+    });
+
 }
