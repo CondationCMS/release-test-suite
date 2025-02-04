@@ -1,0 +1,8 @@
+server/lib/
+server/logs/
+server/*.jar
+server/cms.pid
+server/LICENSE
+server/log4j2.xml
+server/README.md
+server/server.toml
