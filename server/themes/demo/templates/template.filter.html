@@ -1,0 +1,22 @@
+<!DOCTYPE html SYSTEM>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	{% include "libs/fragments.html" %}
+</head>
+
+<body class="centered">
+
+	<div id="content">
+		<div class="container">
+			<span id="raw">{{ node.meta['date']}}</span>
+			<span id="default">{{ node.meta['date'] | date()}}</span>
+			<span id="complete">{{ node.meta['date'] | date('dd.MM.yyyy')}}</span>
+			<span id="month_year">{{ node.meta['date'] | date('MM/yyyy')}}</span>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
